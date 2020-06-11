@@ -1,0 +1,14 @@
+<%= form_for(@factor,url:{controller:'factors',actions:'create'}) do |form|%>
+    <div>
+     <label for="address">Address</label>
+     <%=form.text_field :address%>
+    </div>
+
+    <div>
+    <label for="word">word</label>
+    <%=form.text_field :word%>
+   </div>
+
+   <%=form.submit%>
+
+   <%end%>

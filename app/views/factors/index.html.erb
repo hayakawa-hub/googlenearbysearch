@@ -1,0 +1,17 @@
+<table>
+    <tr>
+    <th>インデックス番号</th><th>起点住所</th><th>目的地</th><th>検索ワード</th>
+    
+    </tr>
+    <%@factor.each do |factor|%>
+    <tr>
+        <td><%=factor.id%></td>
+        <td><%=factor.address%></td>
+        <td><%=factor.word%></td>
+        <td><%=link_to 'show', factor_path(factor)%></td>
+        <td><%= link_to 'Destroy' , factor , method: :delete,data: {confirm: 'Are you sure?' } %></td>
+    </tr>
+    <%end%>
+</table>
+
+<%= link_to 'プランを作る', 'factors/new'%>
